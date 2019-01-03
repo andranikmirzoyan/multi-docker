@@ -14,9 +14,9 @@ after_success:
   - docker build -t andranikmirzoyan/multi-server ./server
   - docker build -t andranikmirzoyan/multi-worker ./worker
   # Log into Docker CLI
-  - echo "$DOCKER_PASSOWRD" | docker login -u "$DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take these images and push to Docker-Hub
-  - docker push sushimonster/multi-client 
-  - docker push sushimonster/multi-nginx
-  - docker push sushimonster/multi-server
-  - docker push sushimonster/multi-worker    
+  - docker push andranikmirzoyan/multi-client 
+  - docker push andranikmirzoyan/multi-nginx
+  - docker push andranikmirzoyan/multi-server
+  - docker push andranikmirzoyan/multi-worker    
